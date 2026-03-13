@@ -195,6 +195,19 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
 .footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.35);transition:color var(--transition)}
 .footer-links a:hover{color:rgba(255,255,255,0.7)}
 
+/* HAMBURGER & MOBILE MENU */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s ease;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:20px 20px 28px;z-index:99;flex-direction:column;gap:4px;box-shadow:0 8px 32px rgba(0,0,0,0.08)}
+.mobile-menu.open{display:flex}
+.mobile-link{display:block;font-size:1rem;font-weight:600;color:var(--text);padding:12px 8px;border-radius:8px;transition:all var(--transition);text-decoration:none}
+.mobile-link:hover{background:var(--gray-bg);color:var(--blue)}
+.mobile-cta{background:var(--navy);color:var(--white)!important;text-align:center;padding:14px;border-radius:var(--radius-btn);margin-top:8px;font-weight:700}
+.mobile-cta:hover{background:var(--dark)!important}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .container{padding:0 28px}
@@ -210,7 +223,7 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
   .problema-grid,.features-grid,.dif-grid{grid-template-columns:1fr}
   .nav-links{display:none!important}
   .nav-cta-desktop{display:none!important}
-  .hamburger{display:flex!important}
+  .hamburger{display:flex!important;flex-direction:column}
   h1{font-size:2rem !important}
   .pricing-grid{max-width:100%}
 }
