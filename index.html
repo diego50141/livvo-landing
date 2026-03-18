@@ -718,5 +718,44 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 </script>
 <script src="https://js.hsforms.net/forms/embed/51192341.js" defer></script>
+<script>
+(function(){
+  function styleHubspotIframe(){
+    var iframe=document.querySelector('#hubspot-form-wrapper iframe');
+    if(!iframe){setTimeout(styleHubspotIframe,500);return}
+    iframe.style.background='transparent';
+    function inject(){
+      try{
+        var doc=iframe.contentDocument||iframe.contentWindow.document;
+        if(!doc.body||!doc.body.innerHTML.trim()){setTimeout(inject,300);return}
+        var s=doc.createElement('style');
+        s.textContent=
+          'body{background:transparent!important;color:#fff!important;font-family:Manrope,sans-serif!important}'+
+          'label,legend,.hs-form-field>label,.hs-field-desc,h1,h2,h3,h4,h5,h6,p,span,div{color:#ffffff!important}'+
+          '.hs-form-field>label{font-size:0.85rem!important;font-weight:600!important;margin-bottom:8px!important;display:block!important}'+
+          '.hs-richtext,.hs-richtext *{color:#ffffff!important}'+
+          '.hs-richtext h1,.hs-richtext h2,.hs-richtext h3,.hs-richtext h4,.hs-richtext p{color:#ffffff!important}'+
+          'input,select,textarea,.hs-input{background:#1e2a3a!important;border:1px solid rgba(255,255,255,0.15)!important;border-radius:9px!important;padding:13px 16px!important;color:#fff!important;font-family:Manrope,sans-serif!important;font-size:0.92rem!important;width:100%!important;box-sizing:border-box!important;-webkit-appearance:none!important;appearance:none!important}'+
+          'input:focus,select:focus,textarea:focus{border-color:#00C7B4!important;background:#253546!important;outline:none!important}'+
+          'input::placeholder{color:rgba(255,255,255,0.3)!important}'+
+          'select option{background:#1e2a3a!important;color:#fff!important}'+
+          '.hs-button{width:100%!important;padding:16px 32px!important;border-radius:9px!important;background:#00C7B4!important;color:#fff!important;font-family:Manrope,sans-serif!important;font-weight:800!important;font-size:1rem!important;border:none!important;cursor:pointer!important;transition:all 0.2s ease!important}'+
+          '.hs-button:hover{background:#00b3a1!important}'+
+          '.hs-error-msgs label{color:#ff6b6b!important;font-size:0.78rem!important}'+
+          '.hs-error-msgs{list-style:none!important;padding:0!important}'+
+          '.submitted-message,.submitted-message *{color:#00C7B4!important;font-weight:700!important;text-align:center!important}'+
+          '.hs-form-booleancheckbox label,.hs-form-booleancheckbox span{color:rgba(255,255,255,0.75)!important;font-size:0.82rem!important}'+
+          'input[type=checkbox]{width:18px!important;height:18px!important;accent-color:#00C7B4!important}'+
+          'a{color:#00C7B4!important}';
+        doc.head.appendChild(s);
+      }catch(e){setTimeout(inject,500)}
+    }
+    iframe.addEventListener('load',inject);
+    inject();
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){setTimeout(styleHubspotIframe,800)})}
+  else{setTimeout(styleHubspotIframe,800)}
+})();
+</script>
 </body>
 </html>
