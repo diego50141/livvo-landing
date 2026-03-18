@@ -182,13 +182,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop
 .faq-item.open .faq-icon{transform:rotate(45deg);color:var(--blue)}
 
 /* CTA FINAL */
-.cta-section{background:var(--navy);padding:96px 0;position:relative;overflow:hidden}
+.cta-section{background:var(--navy);padding:80px 0;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,199,180,0.15) 0%,transparent 70%);pointer-events:none}
-.cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative}
+.cta-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;gap:40px}
 .cta-text h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--white);letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px}
 .cta-text h2 em{font-style:normal;color:var(--teal)}
-.cta-text p{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.7}
-.cta-form{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:36px}
+.cta-text p{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:600px;margin:0 auto}
+.cta-form{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px 48px}
 .form-group{margin-bottom:20px}
 .form-label{display:block;font-size:0.8rem;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:8px}
 .form-input{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:9px;padding:13px 16px;font-family:'Manrope',sans-serif;font-size:0.95rem;color:var(--white);outline:none;transition:border-color var(--transition)}
@@ -223,7 +223,8 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
 /* RESPONSIVE */
 @media(max-width:1024px){
   .container{padding:0 28px}
-  .hero-inner,.cta-inner{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr}
+  .cta-form{padding:28px 24px}
   .hero-visual{display:none}
   .steps{grid-template-columns:repeat(2,1fr);gap:32px}
   .steps::before{display:none}
@@ -238,6 +239,9 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
   .hamburger{display:flex!important;flex-direction:column}
   h1{font-size:2rem !important}
   .pricing-grid{max-width:100%}
+  .cta-form{padding:24px 20px}
+  #hubspot-form-wrapper form{flex-direction:column!important}
+  #hubspot-form-wrapper .hs-submit{min-width:100%!important}
 }
 
 /* HubSpot form overrides for dark CTA section */
@@ -264,10 +268,13 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
 #hubspot-form-wrapper .hs-input::placeholder{color:rgba(255,255,255,0.3)!important}
 #hubspot-form-wrapper .hs-input:focus{border-color:#00C7B4!important}
 #hubspot-form-wrapper select.hs-input option{color:#111;background:#fff}
-#hubspot-form-wrapper .hs-form-field{margin-bottom:20px}
+#hubspot-form-wrapper .hs-form-field{margin-bottom:20px;flex:1;min-width:0}
+#hubspot-form-wrapper form{display:flex!important;flex-wrap:wrap!important;gap:16px!important;align-items:flex-end!important}
+#hubspot-form-wrapper .hs-submit{flex:0 0 auto!important;min-width:200px!important}
+#hubspot-form-wrapper .hs-form-booleancheckbox-display{justify-content:center}
 #hubspot-form-wrapper .hs-error-msgs{list-style:none;margin-top:6px}
 #hubspot-form-wrapper .hs-error-msgs label{color:#ff6b6b!important;font-size:0.78rem!important;text-transform:none!important;letter-spacing:0!important}
-#hubspot-form-wrapper .hs-button{width:100%!important;padding:16px!important;border-radius:9px!important;background:#00C7B4!important;color:#fff!important;font-family:'Manrope',sans-serif!important;font-weight:800!important;font-size:1rem!important;border:none!important;cursor:pointer!important;transition:all 0.2s ease!important;letter-spacing:0.01em!important}
+#hubspot-form-wrapper .hs-button{width:100%!important;padding:16px 32px!important;border-radius:9px!important;background:#00C7B4!important;color:#fff!important;font-family:'Manrope',sans-serif!important;font-weight:800!important;font-size:1rem!important;border:none!important;cursor:pointer!important;transition:all 0.2s ease!important;letter-spacing:0.01em!important;white-space:nowrap!important}
 #hubspot-form-wrapper .hs-button:hover{background:#00b3a1!important;transform:translateY(-2px)!important;box-shadow:0 6px 24px rgba(0,199,180,0.4)!important}
 #hubspot-form-wrapper .hs-form-field > label{color:#ffffff!important;font-size:0.85rem!important;font-weight:600!important;display:block!important;margin-bottom:8px!important}
 #hubspot-form-wrapper .hs-form-field .hs-form-booleancheckbox label{color:rgba(255,255,255,0.75)!important;font-size:0.82rem!important;font-weight:400!important}
