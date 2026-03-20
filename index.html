@@ -227,6 +227,45 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
 .mobile-cta{background:var(--navy);color:var(--white)!important;text-align:center;padding:14px;border-radius:var(--radius-btn);margin-top:8px;font-weight:700}
 .mobile-cta:hover{background:var(--dark)!important}
 
+/* CALCULADORA ROI */
+.calc-wrapper{background:var(--white);border-radius:var(--radius-card);box-shadow:0 4px 24px rgba(10,22,40,0.10);padding:40px;max-width:900px;margin:56px auto 0}
+.calc-header{margin-bottom:32px}
+.calc-header h3{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.calc-header p{font-size:14px;color:var(--muted)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.calc-inputs{display:flex;flex-direction:column;gap:24px}
+.calc-field-label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:8px}
+.calc-field-label span{font-weight:600;color:var(--navy)}
+.calc-range{-webkit-appearance:none;appearance:none;width:100%;height:5px;border-radius:3px;background:#E2E8F0;outline:none;cursor:pointer}
+.calc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#00C87B;cursor:pointer;box-shadow:0 1px 4px rgba(0,200,123,0.4)}
+.calc-range::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#00C87B;cursor:pointer;border:none}
+.calc-plan-badge{background:#F0FBF6;border:1px solid #A7EDD0;border-radius:10px;padding:12px 14px;margin-top:4px}
+.calc-plan-badge p:first-child{font-size:11px;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em}
+.calc-plan-badge p:last-child{font-size:13px;font-weight:600;color:#009960}
+.calc-results{display:flex;flex-direction:column;gap:10px}
+.calc-metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.calc-metric{background:var(--gray-bg);border-radius:10px;padding:12px 14px}
+.calc-metric-label{font-size:11px;color:var(--muted);margin-bottom:4px}
+.calc-metric-value{font-size:20px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+.calc-metric-value.green{color:#00C87B}
+.calc-metric-value.amber{color:#F5A623}
+.calc-metric-value.md{font-size:15px}
+.calc-breakdown{background:var(--white);border:1px solid #E2E8F0;border-radius:10px;padding:14px}
+.calc-breakdown-title{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px}
+.calc-breakdown-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:13px}
+.calc-breakdown-row .lbl{color:var(--muted)}
+.calc-breakdown-row .val{font-weight:600;color:var(--navy)}
+.calc-breakdown-row .val.green{color:#00C87B}
+.calc-breakdown-row .val.red{color:#E84855}
+.calc-sep{border:none;border-top:1px solid #F1F5F9}
+.calc-roi-banner{background:linear-gradient(135deg,#00C87B 0%,#009960 100%);border-radius:12px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.calc-roi-banner .roi-label{font-size:12px;opacity:0.85;margin-bottom:4px}
+.calc-roi-banner .roi-value{font-size:36px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.calc-roi-banner .roi-sub{font-size:13px;font-weight:600}
+.calc-cta{display:block;width:100%;padding:14px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:'Manrope',sans-serif;font-size:15px;font-weight:600;cursor:pointer;text-align:center;text-decoration:none;transition:background 0.2s;margin-top:4px}
+.calc-cta:hover{background:#122040}
+.calc-footer{margin-top:28px;padding-top:20px;border-top:1px solid #E2E8F0;font-size:11px;color:#94A3B8;text-align:center}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .container{padding:0 28px}
@@ -240,7 +279,9 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
 @media(max-width:768px){
   .section{padding:72px 0}
   .container{padding:0 20px}
-  .problema-grid,.features-grid,.dif-grid,.testimonios-grid{grid-template-columns:1fr}
+  .problema-grid,.features-grid,.dif-grid,.testimonios-grid,.calc-grid{grid-template-columns:1fr}
+  .calc-wrapper{padding:24px}
+  .calc-metric-grid{grid-template-columns:1fr}
   .nav-links{display:none!important}
   .nav-cta-desktop{display:none!important}
   .hamburger{display:flex!important;flex-direction:column}
@@ -304,6 +345,7 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
       </svg>
     </a>
     <div class="nav-links">
+      <a href="#calculadora">Calculadora</a>
       <a href="#precios">Precios</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -315,6 +357,7 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#como-funciona" class="mobile-link">Cómo funciona</a>
+  <a href="#calculadora" class="mobile-link">Calculadora</a>
   <a href="#precios" class="mobile-link">Precios</a>
   <a href="#faq" class="mobile-link">FAQ</a>
   <a href="https://meetings.hubspot.com/daar5014" target="_blank" class="mobile-link mobile-cta">Agendar demo →</a>
@@ -558,6 +601,103 @@ footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,2
   </div>
 </section>
 
+<!-- CALCULADORA ROI -->
+<section class="section" id="calculadora">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:620px;margin:0 auto">
+      <span class="label">Calculadora de ROI</span>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-1.5px;color:var(--navy);line-height:1.15">¿Cuánto te cuesta no responder a tiempo?</h2>
+    </div>
+    <div class="calc-wrapper fade-up">
+      <div class="calc-header">
+        <h3>Calculadora de ROI — Livvo</h3>
+        <p>Ingresa los datos de tu inmobiliaria y ve cuánto puedes recuperar cada mes.</p>
+      </div>
+      <div class="calc-grid">
+        <!-- INPUTS -->
+        <div class="calc-inputs">
+          <div>
+            <div class="calc-field-label">Leads por mes (WhatsApp) <span id="lbl-leads">600</span></div>
+            <input type="range" class="calc-range" id="sl-leads" min="100" max="1500" step="50" value="600">
+          </div>
+          <div>
+            <div class="calc-field-label">Inversión en pauta (COP/mes) <span id="lbl-pauta">$3.000.000</span></div>
+            <input type="range" class="calc-range" id="sl-pauta" min="500000" max="10000000" step="100000" value="3000000">
+          </div>
+          <div>
+            <div class="calc-field-label">Tiempo de respuesta actual <span id="lbl-resp">48 h</span></div>
+            <input type="range" class="calc-range" id="sl-resp" min="1" max="72" step="1" value="48">
+          </div>
+          <div>
+            <div class="calc-field-label">Comisión promedio por cierre (COP) <span id="lbl-com">$4.000.000</span></div>
+            <input type="range" class="calc-range" id="sl-com" min="1000000" max="15000000" step="500000" value="4000000">
+          </div>
+          <div>
+            <div class="calc-field-label">Tasa de cierre actual <span id="lbl-cierre">3,0%</span></div>
+            <input type="range" class="calc-range" id="sl-cierre" min="1" max="10" step="0.5" value="3">
+          </div>
+          <div class="calc-plan-badge">
+            <p>Plan incluido</p>
+            <p>500 conversaciones/mes &nbsp;·&nbsp; hasta 5 usuarios &nbsp;·&nbsp; <strong>$500.000 COP/mes</strong></p>
+          </div>
+        </div>
+        <!-- RESULTS -->
+        <div class="calc-results">
+          <div class="calc-metric-grid">
+            <div class="calc-metric">
+              <div class="calc-metric-label">Leads perdidos/mes</div>
+              <div class="calc-metric-value" id="res-perdidos">210</div>
+            </div>
+            <div class="calc-metric">
+              <div class="calc-metric-label">Cierres recuperables</div>
+              <div class="calc-metric-value green" id="res-cierres">6</div>
+            </div>
+            <div class="calc-metric">
+              <div class="calc-metric-label">Ingreso adicional/mes</div>
+              <div class="calc-metric-value green md" id="res-ingreso">$24.000.000</div>
+            </div>
+            <div class="calc-metric">
+              <div class="calc-metric-label">Pauta no convertida</div>
+              <div class="calc-metric-value amber md" id="res-pauta">$1.050.000</div>
+            </div>
+          </div>
+          <div class="calc-breakdown">
+            <div class="calc-breakdown-title">Resumen mensual con Livvo</div>
+            <div class="calc-breakdown-row">
+              <span class="lbl">Ingreso adicional estimado</span>
+              <span class="val green" id="b-ingreso">$24.000.000</span>
+            </div>
+            <hr class="calc-sep">
+            <div class="calc-breakdown-row">
+              <span class="lbl">Costo Livvo (500 conv · 5 usuarios)</span>
+              <span class="val red">$500.000</span>
+            </div>
+            <hr class="calc-sep">
+            <div class="calc-breakdown-row">
+              <span class="lbl">Ganancia neta mensual</span>
+              <span class="val green" id="b-neta">$23.500.000</span>
+            </div>
+          </div>
+          <div class="calc-roi-banner">
+            <div>
+              <div class="roi-label">ROI estimado</div>
+              <div class="roi-value" id="res-roi">48x</div>
+            </div>
+            <div style="text-align:right">
+              <div class="roi-label">Payback</div>
+              <div class="roi-sub">Primer mes</div>
+            </div>
+          </div>
+          <a class="calc-cta" href="https://meetings.hubspot.com/daar5014" target="_blank">Agenda tu demo gratuita →</a>
+        </div>
+      </div>
+      <div class="calc-footer">
+        Estimación basada en datos promedio del mercado inmobiliario colombiano. Los resultados reales pueden variar.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRECIOS -->
 <section class="section section--gray" id="precios">
   <div class="container">
@@ -711,6 +851,52 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     document.body.style.overflow = '';
   });
 });
+
+// Calculadora ROI
+(function(){
+  function fmtCOP(n){return '$'+Math.round(n).toLocaleString('es-CO')}
+  function calcLostRate(h){
+    if(h<=5) return 0.05;
+    if(h<=15) return 0.15;
+    if(h<=30) return 0.25;
+    if(h<=48) return 0.35;
+    return 0.45;
+  }
+  function update(){
+    var leads=+document.getElementById('sl-leads').value;
+    var pauta=+document.getElementById('sl-pauta').value;
+    var resp=+document.getElementById('sl-resp').value;
+    var com=+document.getElementById('sl-com').value;
+    var cierre=+document.getElementById('sl-cierre').value/100;
+
+    document.getElementById('lbl-leads').textContent=Math.round(leads).toLocaleString('es-CO');
+    document.getElementById('lbl-pauta').textContent=fmtCOP(pauta);
+    document.getElementById('lbl-resp').textContent=resp+' h';
+    document.getElementById('lbl-com').textContent=fmtCOP(com);
+    document.getElementById('lbl-cierre').textContent=parseFloat(document.getElementById('sl-cierre').value).toFixed(1).replace('.',',')+' %';
+
+    var lostRate=calcLostRate(resp);
+    var perdidos=Math.round(leads*lostRate);
+    var cierresRec=Math.round(perdidos*cierre);
+    var ingreso=cierresRec*com;
+    var pautaP=Math.round(pauta*lostRate);
+    var costo=500000;
+    var neta=ingreso-costo;
+    var roi=Math.round(ingreso/costo);
+
+    document.getElementById('res-perdidos').textContent=perdidos.toLocaleString('es-CO');
+    document.getElementById('res-cierres').textContent=cierresRec.toLocaleString('es-CO');
+    document.getElementById('res-ingreso').textContent=fmtCOP(ingreso);
+    document.getElementById('res-pauta').textContent=fmtCOP(pautaP);
+    document.getElementById('b-ingreso').textContent=fmtCOP(ingreso);
+    document.getElementById('b-neta').textContent=fmtCOP(neta);
+    document.getElementById('res-roi').textContent=roi+'x';
+  }
+  ['sl-leads','sl-pauta','sl-resp','sl-com','sl-cierre'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',update);
+  });
+  update();
+})();
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(btn => {
