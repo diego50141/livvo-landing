@@ -1,0 +1,103 @@
+# livvo-landing
+
+  Landing page for [Livvo](https://livvo.tech) — AI for real estate agencies that automates lead handling, qualification, and scheduling over WhatsApp.
+
+  🌐 **Live:** https://livvo.tech
+
+  ## What is Livvo
+
+  Livvo responds to, pre-qualifies, and books real estate leads on WhatsApp 24/7, integrating with the tools agencies already use. Built for mid-size real
+  estate agencies in Colombia.
+
+  - 24/7 intelligent assistant
+  - Personalized property recommendations
+  - Automatic appointment reminders
+  - Built-in CRM and dashboard
+  - Integrations with Finca Raíz and Metrocuadrado
+
+  ## Stack
+
+  Static single-file HTML. No build step, no dependencies.
+
+  ## Local development
+
+  ```bash
+  # Open the file directly
+  open index.html
+
+  # Or serve with any static server
+  npx serve .
+
+  Deploy
+
+  Hosted on Vercel (https://vercel.com). Every push to main deploys automatically to https://livvo.tech.
+
+  Contact
+
+  Want a demo? → Book it at livvo.tech (https://livvo.tech)
+
+  ---
+  livvo-landing (Español)
+
+  Landing page de Livvo (https://livvo.tech) — IA para inmobiliarias que automatiza la atención, calificación y agendamiento de leads por WhatsApp.
+
+  🌐 En producción: https://livvo.tech
+
+  Qué es Livvo
+
+  Livvo responde, pre-califica y agenda leads inmobiliarios por WhatsApp 24/7, integrándose con los sistemas que la agencia ya usa. Diseñado para
+  inmobiliarias medianas en Colombia.
+
+  - Asistente inteligente 24/7
+  - Recomendación de propiedades personalizada
+  - Recordatorios automáticos de citas
+  - CRM y dashboard integrados
+  - Conexión con Finca Raíz y Metrocuadrado
+
+  Stack
+
+  Landing page de Livvo (https://livvo.tech) — IA para inmobiliarias que automatiza la atención, calificación y
+  agendamiento de leads por WhatsApp.
+
+  🌐 En producción: https://livvo.tech
+
+  Qué es Livvo
+
+  Livvo responde, pre-califica y agenda leads inmobiliarios por WhatsApp 24/7, integrándose con los sistemas que la
+  agencia ya usa. Diseñado para inmobiliarias medianas en Colombia.
+
+  - Asistente inteligente 24/7
+  - Recomendación de propiedades personalizada
+  - Recordatorios automáticos de citas
+  - CRM y dashboard integrados
+  - Conexión con Finca Raíz y Metrocuadrado
+  Qué es Livvo
+
+  Livvo responde, pre-califica y agenda leads inmobiliarios por WhatsApp 24/7, integrándose con los sistemas que la agencia ya usa. Diseñado para
+  inmobiliarias medianas en Colombia.
+
+  - Asistente inteligente 24/7
+  - Recomendación de propiedades personalizada
+  - Recordatorios automáticos de citas
+  - CRM y dashboard integrados
+  - Conexión con Finca Raíz y Metrocuadrado
+
+  Stack
+
+  HTML estático single-file. Sin build, sin dependencias.
+
+  Desarrollo local
+
+  # Abre el archivo directamente
+  open index.html
+
+  # O sirve con cualquier servidor estático
+  npx serve .
+
+  Deploy
+
+  Hospedado en Vercel (https://vercel.com). Cada push a main despliega automáticamente a https://livvo.tech.
+
+  Contacto
+
+  ¿Quieres una demo? → Agendar en livvo.tech (https://livvo.tech)
