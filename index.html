@@ -1209,6 +1209,23 @@ window._phLoadTime = Date.now();
 <!-- HubSpot scripts (originales) -->
 <script src="https://js.hsforms.net/forms/embed/51192341.js" defer></script>
 <script>
+window.addEventListener('hs-form-event:on-submitted', function (e) {
+  var d = e.detail || {};
+  if (d.formId && d.formId !== '776685a9-952b-4a28-9fb9-bafb29f32231') return;
+  var v = d.submissionValues || (d.data && d.data.submissionValues) || {};
+  if (Array.isArray(v)) {
+    var obj = {};
+    v.forEach(function (c) { obj[c.name] = c.value; });
+    v = obj;
+  }
+  fetch('https://realmate.app.n8n.cloud/webhook/nuevo-lead', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(v)
+  });
+});
+</script>
+<script>
 (function(){
   function styleHubspotIframe(){
     var iframe=document.querySelector('#hubspot-form-wrapper iframe');
